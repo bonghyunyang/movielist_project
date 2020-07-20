@@ -1,5 +1,7 @@
 from django.db import models
 
+# title, year, rating, genres, summary 만 우선 추가 (DB 생성용)
+
 
 class Movie(models.Model):
     title = models.CharField(max_length=100)
@@ -8,4 +10,5 @@ class Movie(models.Model):
     genres = models.CharField(max_length=50)
     summary = models.TextField()
 
-# title, year, rating, genres, summary 만 추가
+    class Meta:
+        db_table = "Movie"
