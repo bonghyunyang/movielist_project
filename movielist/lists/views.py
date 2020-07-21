@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import MovieSerializer
 from rest_framework import status
-from lists.models import *
+from lists.models import Movie
 
 
 class ListView(APIView):
